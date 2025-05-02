@@ -3,6 +3,11 @@ import pefile
 import hashlib
 from colorama import Fore,Style,init
 
+"""
+Author: Axel Dominguez-Cruz
+"""
+
+
 init(autoreset=True) # So we dont have to keep writing Style.RESET_ALL after every print
 
 # As always when you deal with binary info you need to account for endianness
