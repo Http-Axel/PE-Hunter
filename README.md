@@ -1,5 +1,13 @@
 # PE-Hunter
 
+# What does PE-Hunter do?
+
+This script parses a Windows memory dump for PE Files. It then parses the PE files and/or dumps them into your directory. The PE file information that the script tries to find are the following:
+- ImageBase: The imageBase is an address in virtual memory where the executable should be loaded at. A very low address (lower than 0x100000) is suspicious and should be investigated. The Script will warn you if it finds an ImageBase loaded at an address lower than 0x100000.
+- Exports: The functions that are exposed to other modules by the binary. This could potentially give valuable information if some of the functions are named suspiciously.
+- File Type: Is the file a DLL or an executable
+- Sha256 Hash: This is calculated by hashing the many PE Files found in the memory dump. There are limitations here though so please see the limitations section of the README.
+
 # Design Process
 
 - My goal for this project is to be able to parse memory dumps for PE files and using the pefile library we can get specific information from those PE files to see if any malicious indicators are there.
