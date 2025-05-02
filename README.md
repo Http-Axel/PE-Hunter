@@ -16,3 +16,13 @@
 	- SHA256 Hash: Take the hash of the PE File -> Needs more testing
 	- File type: Use **FILE_HEADER.Characteristics** to find the file type
 		- https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-image_file_header
+ 
+# Usage Guide
+
+Usage is simple, just run the script and answer the 2 input prompts. The first prompt will ask you for the path to the memory dump you are trying to read and the second prompt asks if you want the PE files dumped into your directory. 
+
+## Limitations
+
+Please see the following limitations of the script:
+	- The sha256 hash that is taken from the PE files will most likely not match with the original file hash thats on-disk.
+ 	- Modifications would have to be made to the script to account for larger memory dumps. Since this script reads the entire file into a buffer it will crash if the file is massive. For this reason, I made sure to test locally on smaller dumps and rather than full memory dumps I opted for testing on 
