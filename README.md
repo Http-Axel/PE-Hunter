@@ -80,3 +80,17 @@ The reason I created this project was to get a better understanding on how memor
 
 One more thing I took away from this project is that I now have the knowledge and interest to pursue more specific malware checks against memory that I wouldn't have thought of before.
 
+# Resources:
+- https://docs.python.org/3/library/hashlib.html
+- https://learn.microsoft.com/en-us/sysinternals/downloads/procdump
+- https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-image_file_header
+- https://www.elastic.co/security-labs/hunting-memory
+- https://pefile.readthedocs.io/en/latest/modules/pefile.html
+- https://learn.microsoft.com/en-us/archive/msdn-magazine/2002/february/inside-windows-win32-portable-executable-file-format-in-detail
+- https://github.com/Alexpux/mingw-w64/blob/master/mingw-w64-tools/widl/include/winnt.h
+- https://learn.microsoft.com/en-us/windows/win32/debug/pe-format
+- https://www.osforensics.com/tools/volatility-workbench.html 
+- https://stackoverflow.com/questions/47711282/what-does-e-lfanew-mean-in-the-dos-header-for-the-pe-format
+- https://en.wikipedia.org/wiki/DOS_MZ_executable
+- https://github.com/erocarrera/pefile
+- https://github.com/buzzer-re/BulletTrain?utm_source=chatgpt.com
