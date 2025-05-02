@@ -93,4 +93,4 @@ One more thing I took away from this project is that I now have the knowledge an
 - https://stackoverflow.com/questions/47711282/what-does-e-lfanew-mean-in-the-dos-header-for-the-pe-format
 - https://en.wikipedia.org/wiki/DOS_MZ_executable
 - https://github.com/erocarrera/pefile
-- https://github.com/buzzer-re/BulletTrain?utm_source=chatgpt.com
+- https://github.com/buzzer-re/BulletTrain
