@@ -36,7 +36,39 @@ Please see the following limitations of the script:
 - The sha256 hash that is taken from the PE files will most likely not match with the original file hash thats on-disk.
 - Modifications would have to be made to the script to account for larger memory dumps. Since this script reads the entire file into a buffer it will crash if the file is massive. For this reason, I made sure to test locally on smaller dumps rather than full memory dumps since these are as large as your RAM count which is 32GB in my case... 
 
-# Proof that PE Dumps work
+# Validations
+## Example output using a notepad.dmp
+```
+C:/Users/user/AppData/Local/Microsoft/WindowsApps/python3.11.exe c:/Users/user/Documents/Dev/PE-Hunter/main.py
+Would you like to dump the PE? Y/N N
+Please Enter The Path of The Memory Dump: notepad.dmp
+
+[+] PE found at 0x7F3BC
+    ImageBase:  0x683E0000
+    Exports:    []
+    File Type: DLL File
+    Sha256 Hash:    43c374a7125c3e7249687bf207512a18435efda4c9c8eb287d319ac84238c7a5        
+
+[+] PE found at 0x22983BC
+    ImageBase:  0x180000000
+    Exports:    []
+    File Type: DLL File
+    Sha256 Hash:    e2bea5d749f9ba26bfe0d1fc8d062ddecfe576c676da1e23e997d57c112cf80c        
+
+[+] PE found at 0x39CE3BC
+    ImageBase:  0x10000000
+    Exports:    []
+    File Type: DLL File
+    Sha256 Hash:    4ac57b086b0f3ce7720dd85072b0ddee50ac7e65bc3089af57e8c11d120fcda0        
+
+[+] PE found at 0x3B263BC
+    ImageBase:  0x7FFFB8F40000
+    Exports:    ['CreateApplicationBarProxy', 'DllCanUnloadNow', 'DllGetActivationFactory', 'DllGetClassObject', 'GetDependencyLocatorStorage', 'SendTelemetryOnSuspend', 'XamlControlsCalculateFlyoutPlacement', 'XamlControlsGetDatePickerSelection', 'XamlControlsGetListPickerSelection', 'XamlControlsGetPlatformMetadataProvider', 'XamlControlsGetPlatformResourcesModuleHandle', 'XamlControlsGetTimePickerSelection', 'XamlControlsTestHookCreateLoopingSelector', 'XamlTestHookFreePhoneResourceLibrary']
+    File Type: DLL File
+    Sha256 Hash:    d364f6a064100061de3a5078af9f3b8fdc4cae34b698e695dffc95d6f31129a6 
+```
+
+## Proof that PE Dumps work
 
 ![image](https://github.com/user-attachments/assets/a1f443ff-b567-48f4-880f-c69cd22a5f1d)
 
